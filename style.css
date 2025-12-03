@@ -13,6 +13,8 @@ body {
   background-color: #734060;
   color: #333;
   min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
 }
 
 /* Container for responsiveness */
@@ -21,6 +23,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  overflow-x: hidden; /* Prevent container overflow */
 }
 
 h1 {
@@ -42,13 +45,15 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header - Mobile Optimized */
+/* Header - Mobile Optimized - FIXED OVERFLOW */
 .header {
   color: white;
   background-color: #734060;
   text-align: center;
   padding: 20px 15px;
   border-bottom: 3px solid #916b83;
+  width: 100%;
+  overflow: hidden;
 }
 
 .header-con {
@@ -56,6 +61,8 @@ a:hover {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .header-con h1 {
@@ -63,6 +70,11 @@ a:hover {
   color: white;
   margin: 10px 0;
   line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  padding: 0 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .header-con h4 {
@@ -71,14 +83,17 @@ a:hover {
   margin: 0;
   color: #f0f0f0;
   font-weight: 400;
+  width: 100%;
+  text-align: center;
 }
 
 .header-con hr {
   width: 80%;
+  max-width: 300px;
   border: none;
   height: 2px;
   background: #916b83;
-  margin: 5px 0;
+  margin: 5px auto;
 }
 
 .header-con img {
@@ -88,17 +103,19 @@ a:hover {
   object-fit: cover;
   border: 4px solid white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
 }
 
-/* Description - Mobile Optimized */
+/* Description - Mobile Optimized - FIXED OVERFLOW */
 .description {
   background-color: rgba(255, 255, 255, 0.95);
-  width: 100%;
+  width: calc(100% - 30px);
   max-width: 900px;
   padding: 20px 15px;
   margin: 15px auto;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .description p {
@@ -108,6 +125,9 @@ a:hover {
   color: #333;
   line-height: 1.7;
   margin: 0;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .description a {
@@ -119,7 +139,7 @@ a:hover {
   color: #916b83;
 }
 
-/* Ingredients - Mobile Optimized */
+/* Ingredients - Mobile Optimized - FIXED OVERFLOW */
 .ingredients {
   margin: 20px auto;
   padding: 0 15px;
@@ -128,6 +148,8 @@ a:hover {
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  width: calc(100% - 30px);
+  overflow: hidden;
 }
 
 .ingredients h2 {
@@ -137,6 +159,7 @@ a:hover {
   font-size: 1.8rem;
   border-bottom: 2px solid #d66be4;
   padding-bottom: 10px;
+  width: 100%;
 }
 
 .ingredients fieldset {
@@ -145,6 +168,8 @@ a:hover {
   padding: 15px;
   margin-bottom: 20px;
   background: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .ingredients legend {
@@ -154,17 +179,21 @@ a:hover {
   font-weight: bold;
   color: #734060;
   font-size: 1.3rem;
+  width: auto;
+  max-width: 100%;
 }
 
 .ingredients h3 {
   color: #3f3832;
   font-size: 1.4rem;
   margin: 0;
+  word-wrap: break-word;
 }
 
 .ingredients ul {
   padding: 0;
   margin: 15px 0 0 0;
+  width: 100%;
 }
 
 .ingredients li {
@@ -176,6 +205,10 @@ a:hover {
   color: #333;
   font-family: 'Georgia', serif;
   line-height: 1.6;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .ingredients li:before {
@@ -187,11 +220,13 @@ a:hover {
   line-height: 1;
 }
 
-/* Instructions - Mobile Optimized */
+/* Instructions - Mobile Optimized - FIXED OVERFLOW */
 .main {
   max-width: 1200px;
   margin: 30px auto;
   padding: 0 15px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .main h1 {
@@ -201,9 +236,11 @@ a:hover {
   margin: 30px 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 0 10px;
 }
 
-/* Cards Section - Mobile Optimized */
+/* Cards Section - Mobile Optimized - FIXED OVERFLOW */
 .cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -211,10 +248,14 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cards_item {
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card {
@@ -227,6 +268,8 @@ a:hover {
   height: 100%;
   border: none;
   transition: transform 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card:hover {
@@ -245,6 +288,7 @@ a:hover {
   height: 100%;
   border: none;
   object-fit: cover;
+  max-width: 100%;
 }
 
 .card_content {
@@ -254,6 +298,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card_title {
@@ -262,6 +308,8 @@ a:hover {
   font-weight: 700;
   margin: 0 0 15px 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .card_text {
@@ -272,6 +320,8 @@ a:hover {
   font-weight: 400;
   flex-grow: 1;
   opacity: 0.95;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .btn {
@@ -289,6 +339,8 @@ a:hover {
   transition: all 0.3s ease;
   text-align: center;
   text-decoration: none;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .btn:hover {
@@ -301,7 +353,7 @@ a:hover {
   margin-top: auto;
 }
 
-/* Notes Section - Mobile Optimized */
+/* Notes Section - Mobile Optimized - FIXED OVERFLOW */
 fieldset {
   border: 2px solid #d66be4;
   border-radius: 15px;
@@ -310,18 +362,23 @@ fieldset {
   max-width: 900px;
   background: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 30px);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 fieldset legend {
   padding: 0 15px;
-  padding-top: 30px;
   font-size: 1.4rem;
   font-weight: bold;
   color: #734060;
+  width: auto;
+  max-width: 100%;
 }
 
 fieldset ul {
   padding-left: 20px;
+  width: 100%;
 }
 
 fieldset li {
@@ -329,6 +386,9 @@ fieldset li {
   line-height: 1.6;
   font-size: 1.1rem;
   color: #333;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 fieldset li strong {
@@ -340,13 +400,16 @@ fieldset hr {
   height: 1px;
   background: linear-gradient(to right, transparent, #d66be4, transparent);
   margin: 20px 0;
+  width: 100%;
 }
 
-/* Nutrition Facts Section - Mobile Optimized */
+/* Nutrition Facts Section - Mobile Optimized - FIXED OVERFLOW */
 section {
   margin: 40px auto;
   max-width: 900px;
   padding: 0 15px;
+  width: 100%;
+  overflow: hidden;
 }
 
 section h2 {
@@ -355,6 +418,8 @@ section h2 {
   margin-bottom: 25px;
   font-size: 1.8rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 0 10px;
 }
 
 table {
@@ -365,6 +430,8 @@ table {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   font-size: 0.95rem;
+  max-width: 100%;
+  table-layout: fixed; /* Prevent table from overflowing */
 }
 
 th {
@@ -373,6 +440,7 @@ th {
   padding: 15px 10px;
   text-align: center;
   font-size: 1rem;
+  word-wrap: break-word;
 }
 
 td {
@@ -380,6 +448,7 @@ td {
   text-align: center;
   border-bottom: 1px solid #eee;
   font-size: 0.9rem;
+  word-wrap: break-word;
 }
 
 tr:nth-child(even) {
@@ -394,6 +463,69 @@ td em {
   padding: 3px 6px;
   background: #f0f0f0;
   border-radius: 4px;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* FIX FOR SMALL SCREENS - PREVENT OVERFLOW */
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  
+  .container, .header, .description, .ingredients, .main, fieldset, section {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Force all elements to stay within viewport */
+  * {
+    max-width: 100vw;
+  }
+  
+  /* Specific fixes for table on mobile */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  table th,
+  table td {
+    min-width: 100px;
+    white-space: nowrap;
+  }
+  
+  /* Fix for long text */
+  h1, h2, h3, h4, p, li, span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+  
+  /* Ensure iframes don't overflow */
+  iframe {
+    max-width: 100%;
+    height: auto;
+    min-height: 180px;
+  }
+  
+  .card_image {
+    height: auto;
+    min-height: 180px;
+  }
+  
+  .card_image iframe {
+    position: relative;
+    height: 180px;
+  }
 }
 
 /* Tablet - Keep similar to mobile but with 2 columns for cards */
@@ -414,11 +546,16 @@ td em {
   
   .description {
     padding: 25px 20px;
+    width: calc(100% - 40px);
   }
   
   .description p {
     font-size: 1.2rem;
     padding: 20px;
+  }
+  
+  .ingredients {
+    width: calc(100% - 40px);
   }
   
   .ingredients li {
@@ -432,6 +569,7 @@ td em {
   
   table {
     font-size: 1rem;
+    table-layout: auto;
   }
   
   td {
@@ -500,6 +638,10 @@ td em {
   
   .card_text {
     font-size: 1.1rem;
+  }
+  
+  table {
+    table-layout: auto;
   }
 }
 
@@ -576,6 +718,7 @@ td em {
     background-color: white !important;
     color: black !important;
     font-size: 12pt;
+    overflow-x: visible;
   }
   
   .header {
