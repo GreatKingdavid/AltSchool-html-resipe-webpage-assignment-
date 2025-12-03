@@ -3,7 +3,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
@@ -13,15 +12,24 @@ body {
   line-height: 1.6;
   background-color: rgb(115 64 96 / var(--tw-bg-opacity, 1));
   color: #0e0d0d;
+  min-height: 100vh;
+}
+
+/* Container for responsiveness */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
   margin-bottom: 0.4em;
 }
 
@@ -35,140 +43,161 @@ a:hover {
 }
 
 .header {
-    color: white;
+  color: white;
   background-color: #734060;
   text-align: center;
+  padding: 20px 15px;
 }
 
-.header-con h4{
-    padding: 20px;
+.header-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-con h4 {
+  padding: 20px;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .header-con img {
   border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }
 
-.description{
-    background-color: #916b83a8;
-    width: 98%;
-    padding-bottom: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px 30px 0 0;
+.description {
+  background-color: #916b83a8;
+  width: 100%;
+  max-width: 900px;
+  padding: 30px 20px;
+  margin: 20px auto;
+  border-radius: 30px 30px 0 0;
 }
 
-.description p{
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    font-size: 20px;
-    color: #ffffff;
+.description p {
+  text-align: center;
+  padding: 30px 15px;
+  font-size: clamp(16px, 2vw, 20px);
+  color: #ffffff;
+  line-height: 1.8;
+  margin: 0;
 }
 
-.ingredients{
-    margin-left: 33px;
-    margin-right: 33px;
+.ingredients {
+  margin: 20px auto;
+  padding: 0 20px;
+  max-width: 900px;
 }
 
-.ingredients h2{
-   color: #0c0c0c;
-}
-.ingredients legend{
-    margin-left: 20em;
-}
-.ingredients li{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 20px;
-    margin-left: 6em;
-    list-style-type: none;
-    color: #ffffff;
-    font-family: serif;
+.ingredients h2 {
+  color: #0c0c0c;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.instructions{
-    padding: 5em;
-    margin-top: 25px;
-    font-size: 18px;
-    color: rgb(8, 8, 8);
+.ingredients legend {
+  margin-left: 0;
+  padding-top: 25px;
+  margin-bottom: 20px;
 }
 
+.ingredients ul {
+  padding: 0;
+  margin: 0;
+}
 
-/* Design */
-/* *,
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
+.ingredients li {
+  margin: 15px 0;
+  font-size: clamp(16px, 2vw, 20px);
+  margin-left: 0;
+  padding-left: 40px;
+  position: relative;
+  list-style-type: none;
+  color: #2e2929;
+  font-family: serif;
+  line-height: 1.6;
+}
 
-/* html {
-  background-color: #ecf9ff;
-} */
+.ingredients li:before {
+  content: "•";
+  position: absolute;
+  left: 20px;
+  color: #ffffff;
+  font-size: 24px;
+}
 
-/* body {
-  color: #272727;
-  font-family: 'Quicksand', serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
-} */
+.instructions {
+  padding: 30px 20px;
+  margin-top: 25px;
+  font-size: 18px;
+  color: rgb(8, 8, 8);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.main{
+.main {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
-h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.btn {
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
+.main h1 {
+  font-size: clamp(20px, 4vw, 24px);
   font-weight: 400;
-  display: block;
+  text-align: center;
+  margin: 30px 0;
+  color: white;
+}
+
+/* Responsive YouTube Videos */
+.video-container {
+  position: relative;
   width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
+/* Cards Section - Instructions */
 .cards {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  margin: 20px -10px;
   padding: 0;
+  justify-content: center;
 }
 
 .cards_item {
   display: flex;
-  padding: 1rem;
+  padding: 10px;
+  width: 100%;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 768px) {
   .cards_item {
     width: 50%;
   }
 }
 
-@media (min-width: 56rem) {
+@media (min-width: 992px) {
   .cards_item {
     width: 33.3333%;
   }
@@ -176,32 +205,357 @@ img {
 
 .card {
   background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card_image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card_image iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
 }
 
 .card_content {
-  padding: 1rem;
+  padding: 20px;
   background: #d66be4;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card_title {
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: capitalize;
-  margin: 0px;
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .card_text {
   color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;    
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
   font-weight: 400;
+  flex-grow: 1;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  font-weight: 600;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.card_btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Notes Section */
+fieldset {
+  border: 2px solid #d66be4;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+fieldset legend {
+  padding: 0 15px;
+  padding-top: 30px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #734060;
+}
+
+fieldset ul {
+  padding-left: 20px;
+}
+
+fieldset li {
+  margin: 15px 0;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+fieldset hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d66be4, transparent);
+  margin: 20px 0;
+}
+
+/* Nutrition Facts Section */
+section:last-of-type {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+section:last-of-type h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: #734060;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+td em {
+  font-style: normal;
+  font-weight: bold;
+  color: #734060;
+}
+
+/* Responsive Breakpoints */
+
+/* Mobile First */
+@media (max-width: 767px) {
+  .header-con {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-con h4 {
+    padding: 15px 10px;
+    font-size: 1.2rem;
+  }
+  
+  .header-con img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .description {
+    padding: 20px 15px;
+    margin: 15px;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .description p {
+    padding: 20px 10px;
+  }
+  
+  .ingredients {
+    padding: 0 15px;
+  }
+  
+  .ingredients li {
+    padding-left: 30px;
+    margin: 12px 0;
+  }
+  
+  .ingredients li:before {
+    left: 10px;
+  }
+  
+  .instructions {
+    padding: 20px 15px;
+  }
+  
+  .cards_item {
+    padding: 8px;
+  }
+  
+  .card_image {
+    height: 180px;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .cards_item {
+    width: 50%;
+  }
+  
+  .description {
+    width: 95%;
+  }
+  
+  .ingredients li {
+    margin-left: 2em;
+    padding-left: 0;
+  }
+  
+  .ingredients li:before {
+    display: none;
+  }
+  
+  .ingredients legend {
+    margin-left: 10em;
+  }
+  
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .cards_item {
+    width: 33.3333%;
+  }
+  
+  .ingredients legend {
+    margin-left: 20em;
+  }
+  
+  .ingredients li {
+    margin-left: 6em;
+  }
+  
+  .card_image {
+    height: 180px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0;
+  }
+  
+  .description {
+    width: 98%;
+  }
+  
+  .card_image {
+    height: 200px;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 480px) {
+  .header-con h4 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  .description p {
+    font-size: 16px;
+    padding: 15px 5px;
+  }
+  
+  .ingredients li {
+    font-size: 16px;
+  }
+  
+  .instructions {
+    font-size: 16px;
+    padding: 15px;
+  }
+  
+  .card_content {
+    padding: 15px;
+  }
+  
+  .card_title {
+    font-size: 1.1rem;
+  }
+  
+  .card_text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .btn, .cards, .video-container {
+    display: none;
+  }
+  
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .description, .ingredients, .instructions, fieldset {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ddd !important;
+  }
+  
+  .description p, .ingredients li, .card_content {
+    color: black !important;
+    background: white !important;
+  }
+  
+  table {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
 }
