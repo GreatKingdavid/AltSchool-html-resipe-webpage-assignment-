@@ -8,10 +8,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: rgb(115 64 96 / var(--tw-bg-opacity, 1));
-  color: #0e0d0d;
+  background-color: #734060;
+  color: #333;
   min-height: 100vh;
 }
 
@@ -39,14 +39,16 @@ a {
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
+/* Header - Mobile Optimized */
 .header {
   color: white;
   background-color: #734060;
   text-align: center;
   padding: 20px 15px;
+  border-bottom: 3px solid #916b83;
 }
 
 .header-con {
@@ -56,174 +58,186 @@ a:hover {
   gap: 15px;
 }
 
+.header-con h1 {
+  font-size: 1.8rem;
+  color: white;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
 .header-con h4 {
-  padding: 20px;
-  font-size: 1.5rem;
+  padding: 10px;
+  font-size: 1.1rem;
   margin: 0;
+  color: #f0f0f0;
+  font-weight: 400;
+}
+
+.header-con hr {
+  width: 80%;
+  border: none;
+  height: 2px;
+  background: #916b83;
+  margin: 5px 0;
 }
 
 .header-con img {
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Description - Mobile Optimized */
 .description {
-  background-color: #916b83a8;
+  background-color: rgba(255, 255, 255, 0.95);
   width: 100%;
   max-width: 900px;
-  padding: 30px 20px;
-  margin: 20px auto;
-  border-radius: 30px 30px 0 0;
+  padding: 20px 15px;
+  margin: 15px auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .description p {
   text-align: center;
-  padding: 30px 15px;
-  font-size: clamp(16px, 2vw, 20px);
-  color: #ffffff;
-  line-height: 1.8;
+  padding: 15px 10px;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
   margin: 0;
 }
 
+.description a {
+  color: #734060;
+  font-weight: 600;
+}
+
+.description a:hover {
+  color: #916b83;
+}
+
+/* Ingredients - Mobile Optimized */
 .ingredients {
   margin: 20px auto;
-  padding: 0 20px;
+  padding: 0 15px;
   max-width: 900px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .ingredients h2 {
-  color: #0c0c0c;
+  color: #734060;
   text-align: center;
   margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #d66be4;
+  padding-bottom: 10px;
+}
+
+.ingredients fieldset {
+  border: 2px solid #d66be4;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #f9f9f9;
 }
 
 .ingredients legend {
   margin-left: 0;
-  padding-top: 25px;
-  margin-bottom: 20px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #734060;
+  font-size: 1.3rem;
+}
+
+.ingredients h3 {
+  color: #3f3832;
+  font-size: 1.4rem;
+  margin: 0;
 }
 
 .ingredients ul {
   padding: 0;
-  margin: 0;
+  margin: 15px 0 0 0;
 }
 
 .ingredients li {
-  margin: 15px 0;
-  font-size: clamp(16px, 2vw, 20px);
-  margin-left: 0;
-  padding-left: 40px;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  padding-left: 30px;
   position: relative;
   list-style-type: none;
-  color: #2e2929;
-  font-family: serif;
+  color: #333;
+  font-family: 'Georgia', serif;
   line-height: 1.6;
 }
 
 .ingredients li:before {
   content: "•";
   position: absolute;
-  left: 20px;
-  color: #ffffff;
+  left: 10px;
+  color: #d66be4;
   font-size: 24px;
+  line-height: 1;
 }
 
-.instructions {
-  padding: 30px 20px;
-  margin-top: 25px;
-  font-size: 18px;
-  color: rgb(8, 8, 8);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* Instructions - Mobile Optimized */
 .main {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 0 15px;
 }
 
 .main h1 {
-  font-size: clamp(20px, 4vw, 24px);
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 600;
   text-align: center;
   margin: 30px 0;
   color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive YouTube Videos */
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  margin: 20px 0;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Cards Section - Instructions */
+/* Cards Section - Mobile Optimized */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
   list-style: none;
-  margin: 20px -10px;
+  margin: 0;
   padding: 0;
-  justify-content: center;
 }
 
 .cards_item {
   display: flex;
-  padding: 10px;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .cards_item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 992px) {
-  .cards_item {
-    width: 33.3333%;
-  }
 }
 
 .card {
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   overflow: hidden;
   height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: none;
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
 }
 
 .card_image {
   width: 100%;
-  height: 200px;
+  height: 180px;
   overflow: hidden;
+  position: relative;
 }
 
 .card_image iframe {
@@ -235,7 +249,7 @@ a:hover {
 
 .card_content {
   padding: 20px;
-  background: #d66be4;
+  background: linear-gradient(135deg, #d66be4 0%, #b44eb5 100%);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -244,42 +258,41 @@ a:hover {
 
 .card_title {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
   margin: 0 0 15px 0;
-  padding-bottom: 10px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .card_text {
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 20px;
   font-weight: 400;
   flex-grow: 1;
+  opacity: 0.95;
 }
 
 .btn {
   color: #ffffff;
   padding: 12px 24px;
-  font-size: 14px;
+  font-size: 0.95rem;
   text-transform: uppercase;
   border-radius: 25px;
   font-weight: 600;
   display: inline-block;
   width: auto;
   cursor: pointer;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   background: rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   text-align: center;
+  text-decoration: none;
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
 
@@ -288,14 +301,15 @@ a:hover {
   margin-top: auto;
 }
 
-/* Notes Section */
+/* Notes Section - Mobile Optimized */
 fieldset {
   border: 2px solid #d66be4;
   border-radius: 15px;
   padding: 20px;
   margin: 30px auto;
   max-width: 900px;
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 fieldset legend {
@@ -313,7 +327,12 @@ fieldset ul {
 fieldset li {
   margin: 15px 0;
   line-height: 1.6;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+fieldset li strong {
+  color: #734060;
 }
 
 fieldset hr {
@@ -323,18 +342,19 @@ fieldset hr {
   margin: 20px 0;
 }
 
-/* Nutrition Facts Section */
-section:last-of-type {
+/* Nutrition Facts Section - Mobile Optimized */
+section {
   margin: 40px auto;
   max-width: 900px;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
-section:last-of-type h2 {
+section h2 {
   text-align: center;
   color: white;
   margin-bottom: 25px;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 table {
@@ -344,109 +364,120 @@ table {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
 }
 
 th {
   background-color: #734060;
   color: white;
-  padding: 15px;
+  padding: 15px 10px;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 td {
-  padding: 12px 15px;
+  padding: 12px 10px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
-  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
 }
 
 tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-tr:hover {
-  background-color: #f5f5f5;
-}
-
 td em {
   font-style: normal;
   font-weight: bold;
   color: #734060;
+  display: inline-block;
+  padding: 3px 6px;
+  background: #f0f0f0;
+  border-radius: 4px;
 }
 
-/* Responsive Breakpoints */
-
-/* Mobile First */
-@media (max-width: 767px) {
-  .header-con {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .header-con h4 {
-    padding: 15px 10px;
-    font-size: 1.2rem;
+/* Tablet - Keep similar to mobile but with 2 columns for cards */
+@media (min-width: 768px) {
+  .header-con h1 {
+    font-size: 2.2rem;
   }
   
   .header-con img {
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 160px;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   
   .description {
-    padding: 20px 15px;
-    margin: 15px;
-    border-radius: 20px 20px 0 0;
+    padding: 25px 20px;
   }
   
   .description p {
-    padding: 20px 10px;
-  }
-  
-  .ingredients {
-    padding: 0 15px;
+    font-size: 1.2rem;
+    padding: 20px;
   }
   
   .ingredients li {
-    padding-left: 30px;
-    margin: 12px 0;
+    font-size: 1.2rem;
+    padding-left: 40px;
   }
   
   .ingredients li:before {
-    left: 10px;
-  }
-  
-  .instructions {
-    padding: 20px 15px;
-  }
-  
-  .cards_item {
-    padding: 8px;
-  }
-  
-  .card_image {
-    height: 180px;
+    left: 15px;
   }
   
   table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+    font-size: 1rem;
+  }
+  
+  td {
+    font-size: 0.95rem;
   }
 }
 
-/* Tablet */
-@media (min-width: 768px) {
-  .cards_item {
-    width: 50%;
+/* Desktop - Your preferred layout */
+@media (min-width: 992px) {
+  .header-con {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .header-con h1 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  
+  .header-con h4 {
+    font-size: 1.3rem;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
   }
   
   .description {
     width: 95%;
+    padding: 30px;
+  }
+  
+  .description p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+  
+  .ingredients {
+    width: 95%;
+    padding: 30px;
   }
   
   .ingredients li {
+    font-size: 1.3rem;
     margin-left: 2em;
     padding-left: 0;
   }
@@ -459,27 +490,16 @@ td em {
     margin-left: 10em;
   }
   
-  table {
-    font-size: 0.9rem;
-  }
-}
-
-/* Desktop */
-@media (min-width: 992px) {
-  .cards_item {
-    width: 33.3333%;
-  }
-  
-  .ingredients legend {
-    margin-left: 20em;
-  }
-  
-  .ingredients li {
-    margin-left: 6em;
-  }
-  
   .card_image {
-    height: 180px;
+    height: 200px;
+  }
+  
+  .card_title {
+    font-size: 1.4rem;
+  }
+  
+  .card_text {
+    font-size: 1.1rem;
   }
 }
 
@@ -494,33 +514,34 @@ td em {
   }
   
   .card_image {
-    height: 200px;
+    height: 220px;
   }
 }
 
-/* Fix for very small screens */
-@media (max-width: 480px) {
+/* Very small screens optimization */
+@media (max-width: 360px) {
+  .header-con h1 {
+    font-size: 1.6rem;
+  }
+  
   .header-con h4 {
     font-size: 1rem;
-    padding: 10px;
+    padding: 8px;
+  }
+  
+  .header-con img {
+    width: 120px;
+    height: 120px;
   }
   
   .description p {
-    font-size: 16px;
-    padding: 15px 5px;
+    font-size: 1rem;
+    padding: 12px 5px;
   }
   
   .ingredients li {
-    font-size: 16px;
-  }
-  
-  .instructions {
-    font-size: 16px;
-    padding: 15px;
-  }
-  
-  .card_content {
-    padding: 15px;
+    font-size: 1rem;
+    padding-left: 25px;
   }
   
   .card_title {
@@ -529,6 +550,19 @@ td em {
   
   .card_text {
     font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  table {
+    font-size: 0.85rem;
+  }
+  
+  th, td {
+    padding: 10px 5px;
   }
 }
 
@@ -541,12 +575,28 @@ td em {
   body {
     background-color: white !important;
     color: black !important;
+    font-size: 12pt;
+  }
+  
+  .header {
+    background-color: white !important;
+    color: black !important;
+    border-bottom: 2px solid #000;
+  }
+  
+  .header-con h1 {
+    color: black !important;
+  }
+  
+  .header-con img {
+    border: 2px solid #000;
   }
   
   .description, .ingredients, .instructions, fieldset {
     background-color: white !important;
     color: black !important;
     border: 1px solid #ddd !important;
+    box-shadow: none !important;
   }
   
   .description p, .ingredients li, .card_content {
