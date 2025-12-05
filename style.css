@@ -109,8 +109,8 @@ a:hover {
 /* Description - Mobile Optimized  */
 .description {
   background-color: rgba(255, 255, 255, 0.95);
-  width: calc(100% - 30px);
-  max-width: 900px;
+  width: calc(108% - 30px);
+  max-width: 990px;
   padding: 20px 15px;
   margin: 15px auto;
   border-radius: 15px;
@@ -141,14 +141,16 @@ a:hover {
 
 /* Ingredients - Mobile Optimized  */
 .ingredients {
-  margin: 20px auto;
-  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: auto;
+  padding-right: auto;
   max-width: 900px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: calc(100% - 30px);
+  width: calc(110% - 30px);
   overflow: hidden;
 }
 
