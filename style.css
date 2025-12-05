@@ -45,7 +45,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header - Mobile Optimized - FIXED OVERFLOW */
+/* Header - Mobile Optimized  */
 .header {
   color: white;
   background-color: #734060;
@@ -106,7 +106,7 @@ a:hover {
   max-width: 100%;
 }
 
-/* Description - Mobile Optimized - FIXED OVERFLOW */
+/* Description - Mobile Optimized  */
 .description {
   background-color: rgba(255, 255, 255, 0.95);
   width: calc(100% - 30px);
@@ -139,7 +139,7 @@ a:hover {
   color: #916b83;
 }
 
-/* Ingredients - Mobile Optimized - FIXED OVERFLOW */
+/* Ingredients - Mobile Optimized  */
 .ingredients {
   margin: 20px auto;
   padding: 0 15px;
@@ -220,7 +220,7 @@ a:hover {
   line-height: 1;
 }
 
-/* Instructions - Mobile Optimized - FIXED OVERFLOW */
+/* Instructions - Mobile Optimized  */
 .main {
   max-width: 1200px;
   margin: 30px auto;
@@ -240,7 +240,7 @@ a:hover {
   padding: 0 10px;
 }
 
-/* Cards Section - Mobile Optimized - FIXED OVERFLOW */
+/* Cards Section - Mobile Optimized  */
 .cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -353,7 +353,7 @@ a:hover {
   margin-top: auto;
 }
 
-/* Notes Section - Mobile Optimized - FIXED OVERFLOW */
+/* Notes Section - Mobile  */
 fieldset {
   border: 2px solid #d66be4;
   border-radius: 15px;
@@ -403,7 +403,7 @@ fieldset hr {
   width: 100%;
 }
 
-/* Nutrition Facts Section - Mobile Optimized - FIXED OVERFLOW */
+/* Nutrition Facts Section - Mobile */
 section {
   margin: 40px auto;
   max-width: 900px;
@@ -467,115 +467,9 @@ td em {
   max-width: 100%;
 }
 
-/* FIX FOR SMALL SCREENS - PREVENT OVERFLOW */
-@media (max-width: 767px) {
-  body {
-    overflow-x: hidden;
-    width: 100vw;
-  }
-  
-  .container, .header, .description, .ingredients, .main, fieldset, section {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-  }
-  
-  /* Force all elements to stay within viewport */
-  * {
-    max-width: 100vw;
-  }
-  
-  /* Specific fixes for table on mobile */
-  table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  table th,
-  table td {
-    min-width: 100px;
-    white-space: nowrap;
-  }
-  
-  /* Fix for long text */
-  h1, h2, h3, h4, p, li, span {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
-  }
-  
-  /* Ensure iframes don't overflow */
-  iframe {
-    max-width: 100%;
-    height: auto;
-    min-height: 180px;
-  }
-  
-  .card_image {
-    height: auto;
-    min-height: 180px;
-  }
-  
-  .card_image iframe {
-    position: relative;
-    height: 180px;
-  }
-}
 
-/* Tablet - Keep similar to mobile but with 2 columns for cards */
-@media (min-width: 768px) {
-  .header-con h1 {
-    font-size: 2.2rem;
-  }
-  
-  .header-con img {
-    width: 160px;
-    height: 160px;
-  }
-  
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .description {
-    padding: 25px 20px;
-    width: calc(100% - 40px);
-  }
-  
-  .description p {
-    font-size: 1.2rem;
-    padding: 20px;
-  }
-  
-  .ingredients {
-    width: calc(100% - 40px);
-  }
-  
-  .ingredients li {
-    font-size: 1.2rem;
-    padding-left: 40px;
-  }
-  
-  .ingredients li:before {
-    left: 15px;
-  }
-  
-  table {
-    font-size: 1rem;
-    table-layout: auto;
-  }
-  
-  td {
-    font-size: 0.95rem;
-  }
-}
+
+
 
 /* Desktop - Your preferred layout */
 @media (min-width: 992px) {
@@ -645,110 +539,6 @@ td em {
   }
 }
 
-/* Large Desktop */
-@media (min-width: 1200px) {
-  .container {
-    padding: 0;
-  }
-  
-  .description {
-    width: 98%;
-  }
-  
-  .card_image {
-    height: 220px;
-  }
-}
 
-/* Very small screens optimization */
-@media (max-width: 360px) {
-  .header-con h1 {
-    font-size: 1.6rem;
-  }
-  
-  .header-con h4 {
-    font-size: 1rem;
-    padding: 8px;
-  }
-  
-  .header-con img {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .description p {
-    font-size: 1rem;
-    padding: 12px 5px;
-  }
-  
-  .ingredients li {
-    font-size: 1rem;
-    padding-left: 25px;
-  }
-  
-  .card_title {
-    font-size: 1.1rem;
-  }
-  
-  .card_text {
-    font-size: 0.9rem;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-  
-  table {
-    font-size: 0.85rem;
-  }
-  
-  th, td {
-    padding: 10px 5px;
-  }
-}
 
-/* Print styles */
-@media print {
-  .btn, .cards, .video-container {
-    display: none;
-  }
-  
-  body {
-    background-color: white !important;
-    color: black !important;
-    font-size: 12pt;
-    overflow-x: visible;
-  }
-  
-  .header {
-    background-color: white !important;
-    color: black !important;
-    border-bottom: 2px solid #000;
-  }
-  
-  .header-con h1 {
-    color: black !important;
-  }
-  
-  .header-con img {
-    border: 2px solid #000;
-  }
-  
-  .description, .ingredients, .instructions, fieldset {
-    background-color: white !important;
-    color: black !important;
-    border: 1px solid #ddd !important;
-    box-shadow: none !important;
-  }
-  
-  .description p, .ingredients li, .card_content {
-    color: black !important;
-    background: white !important;
-  }
-  
-  table {
-    box-shadow: none;
-    border: 1px solid #ddd;
-  }
-}
+
