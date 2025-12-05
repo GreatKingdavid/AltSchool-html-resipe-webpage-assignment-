@@ -120,13 +120,15 @@ a:hover {
 
 .description p {
   text-align: center;
-  padding: 15px 10px;
+  margin: auto;
   font-size: 1.1rem;
+  font-weight: bolder;
   color: #333;
   line-height: 1.7;
-  margin: 0;
-  width: 100%;
+  margin-bottom: 10px;
+  width: 90%;
   word-wrap: break-word;
+  
   overflow-wrap: break-word;
 }
 
@@ -280,23 +282,23 @@ a:hover {
 
 .card_image {
   width: 100%;
-  height: 180px;
+  height: 499px;
   overflow: hidden;
   position: relative;
 }
 
 .card_image iframe {
   width: 100%;
-  height: 100%;
+  height: 120%;
   border: none;
-  object-fit: cover;
+  object-fit: fill;
   max-width: 100%;
 }
 
 .card_content {
   padding: 20px;
   background: linear-gradient(135deg, #d66be4 0%, #b44eb5 100%);
-  height: 100%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -370,7 +372,7 @@ fieldset {
 }
 
 fieldset legend {
-  padding: 0 15px;
+  padding-top: 50px;
   font-size: 1.4rem;
   font-weight: bold;
   color: #734060;
